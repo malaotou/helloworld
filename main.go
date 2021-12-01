@@ -7,7 +7,7 @@ import (
 func main() {
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
-		c.JSON(200, "this is all right")
+		c.JSON(200, gin.H{"message": "hello world"})
 	})
 	router.Run(":3000")
 }
